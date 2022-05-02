@@ -1,0 +1,12 @@
+<div class="categoriasgeneral">
+    <div *ngFor="let item of categorias" class="categoria">
+        <a [routerLink]="['categoria/'+item.id]">
+        <div class="card">
+            <img class="card-img-top" src="{{item.url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{item.nombre}}</h5>
+            </div>
+          </div>
+        </a>
+    </div>
+</div>

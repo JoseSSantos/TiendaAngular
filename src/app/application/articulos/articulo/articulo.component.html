@@ -1,0 +1,13 @@
+<div class="card" *ngIf="item" [routerLink]="['/articulo/'+item.id]">
+    <img class="card-img-top" src="{{item.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.nombre}}</h5>
+      <p class="card-text">{{ item.precio | currency:'EUR'}}</p>
+      <p *ngIf="item.stock==0">Out Of Stock</p>
+      <p *ngIf="item.stock!=0">Stock: {{item.stock}}</p>
+      <div class="fav">
+        <i  *ngIf="item.favorito" class="fa-solid fa-heart"></i>
+        <i  *ngIf="!item.favorito" class="fa-regular fa-heart"></i>
+      </div>
+    </div>
+  </div>
